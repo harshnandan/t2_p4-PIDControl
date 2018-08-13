@@ -1,8 +1,11 @@
 #ifndef PID_H
 #define PID_H
 
+#include <iostream>
+
 class PID {
 public:
+  bool _intialized;
   /*
   * Errors
   */
@@ -16,6 +19,8 @@ public:
   double Kp;
   double Ki;
   double Kd;
+
+  double prev_cte;
 
   /*
   * Constructor
